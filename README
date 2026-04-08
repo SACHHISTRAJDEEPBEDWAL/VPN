@@ -1,16 +1,57 @@
-SETUP STEPS:
-1. Install Python from python.org
-2. Install requests library: pip install requests
-3. Install OpenVPN from openvpn.net/community-downloads
-4. Get a FREE Los Angeles .ovpn config file from:
-   → vpnbook.com (free, pick a US server)
-   → protonvpn.com (free tier, pick US-LA)
-5. Place the .ovpn file in THIS folder
-5. Double-click run.bat AS ADMINISTRATOR
+# 🚀 Ultimate VPN Setup & Kill Switch
 
-KILL SWITCH:
-If VPN drops, all internet is blocked automatically.
-Click the button to disconnect and restore internet.
-For Direct Kill Switch:
-1. netsh advfirewall set allprofiles firewallpolicy blockinbound,allowoutbound
-2. taskkill /F /IM openvpn.exe
+Welcome to the quick and secure VPN setup guide! Follow these simple steps to get your secure tunnel up and running in minutes.
+
+---
+
+## 🛠️ Setup Steps
+
+**1. Install Python**
+> Ensure your system is ready by installing the core runtime environment from [python.org](https://www.python.org).
+
+**2. Install Dependencies**
+> Install the necessary libraries to handle network requests. Open your terminal and run:
+```bash
+pip install requests
+```
+
+**3. Install OpenVPN Client**
+> Grab the official community client to establish the secure tunnel:
+> 🔗 [openvpn.net/community-downloads](https://openvpn.net/community-downloads)
+
+**4. Get a Configuration File (.ovpn)**
+> Get a **FREE** Los Angeles `.ovpn` configuration file from trusted providers:
+> - 🟢 **[VPNBook](https://www.vpnbook.com/)** (Free, pick a US server)
+> - 🟣 **[ProtonVPN](https://protonvpn.com/)** (Free tier, pick US-LA)
+
+**5. Local Setup**
+> Place the downloaded `.ovpn` file exactly in **THIS** folder alongside your scripts.
+
+**6. Ignition! 🪐**
+> Launch the script to finalize setup.
+> ⚠️ **Double-click `run.bat` AS ADMINISTRATOR**
+
+---
+
+## 🛡️ The Kill Switch
+
+> [!WARNING]
+> **Auto-Protection Active:** If the VPN drops, all internet is blocked automatically to prevent IP leaks! Click the disconnect button inside the app to restore normal internet.
+
+### ⚡ Direct Override Commands
+
+If you ever need to manually activate the kill switch via the terminal, open your Command Prompt as Administrator and run:
+
+**1. Lock down the firewall:**
+```cmd
+netsh advfirewall set allprofiles firewallpolicy blockinbound,allowoutbound
+```
+
+**2. Terminate OpenVPN forcefully:**
+```cmd
+taskkill /F /IM openvpn.exe
+```
+
+---
+*Stay secure! 🔒*
+
